@@ -1,38 +1,76 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+.wrap{
+  font-family: Noto Sans KR;
+}
+
+.header_wrap{
+  width: 100%;
+  height: 64px;
+  min-width: 1200px;
+  /* background-color: #9ADCFF; */
+}
+
+.header{
+  height: fit-content;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content_wrap{
+  width: 100%;
+  min-width: 1200px;
+  /* background-color: #FFF89A; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content{
+  width: 1200px;
+  min-height: 900px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left_wrap {
+width: 900px;
+min-height: 900px;
+background-color: #ffd8d2;
+float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.right_wrap {
+float: left;
+min-height: 900px;
+background-color: #ffc7be;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile_wrap, .menu_wrap{
+  width: 300px;
+}
+
+.profile_wrap{
+  width: 260px;
+  background-color: #fdaa9d;
+  padding: 20px;
+}
+
+.profile_wrap > .MuiCard-root{
+  /* margin: 10px auto 0 auto; */
+}
+
+.menu_wrap{
+  height: 400px;
+}
+
+.footer_wrap{
+  clear: both;
+  background-color: #FF8AAE;
+  text-align: center;
+}
+
+.footer{
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #ff5588;
+  height: 100px;
 }
