@@ -33,14 +33,14 @@
 .left_wrap {
 width: 900px;
 min-height: 900px;
-background-color: #ffd8d2;
+/* background-color: #ffd8d2; */
 float: left;
 }
 
 .right_wrap {
 float: left;
 min-height: 900px;
-background-color: #ffc7be;
+/* background-color: #ffc7be; */
 
 }
 
@@ -50,8 +50,8 @@ background-color: #ffc7be;
 
 .profile_wrap{
   width: 260px;
-  background-color: #fdaa9d;
-  padding: 20px;
+  /* background-color: #fdaa9d; */
+  /* padding: 20px; */
 }
 
 .profile_wrap > .MuiCard-root{
@@ -64,13 +64,18 @@ background-color: #ffc7be;
 
 .footer_wrap{
   clear: both;
-  background-color: #FF8AAE;
+  /* background-color: #FF8AAE; */
   text-align: center;
 }
 
 .footer{
   width: 1200px;
   margin: 0 auto;
-  background-color: #ff5588;
+  /* background-color: #ff5588; */
   height: 100px;
+}
+
+#writeform #title{
+  display: block;
+  width: 500px;
 }

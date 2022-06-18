@@ -13,13 +13,13 @@ export default function ActionAreaCard() {
     const[intro, setIntro]=useState(`안녕하세요. Darren's Devlog에 오신 것을 환영합니다.
                                     ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ`)
   return (
-    <Card sx={{ maxWidth: 380 }}>
+    <Card sx={{ maxWidth: 380}}>
       <CardActionArea>
         <CardMedia
           component="img"
           min-height="300"
           image={profilePic}
-          alt="green iguana"
+          alt=""
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

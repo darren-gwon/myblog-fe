@@ -8,6 +8,7 @@ import WritePosting from './components/Posting/WritePosting';
 import RecentPosting from './components/Posting/RecentPosting';
 import Profile from './components/sidebar/Profile';
 import Footer from './components/footer/Footer';
+import Box from '@mui/material/Box';
 
 function App() {
   return (
@@ -28,9 +29,11 @@ function App() {
             </Routes>
           </div>
           <div className='right_wrap'>
-            <div className='profile_wrap'>
+            <Box className='profile_wrap' sx={{
+              display:"flex"
+            }}>
               <Profile/>
-            </div>
+            </Box>
             <div className='menu_wrap'>
               <Menu/>
             </div>
