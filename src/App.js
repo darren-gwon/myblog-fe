@@ -33,6 +33,7 @@ function App() {
               display:"flex"
             }}>
               <Profile/>
+                <NavLink to='/posting/write'>글쓰기</NavLink>
             </Box>
             <div className='menu_wrap'>
               <Menu/>
