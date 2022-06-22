@@ -1,21 +1,36 @@
-import { useRef } from 'react';
 import { FormControl, InputLabel, Input, TextField, Button } from '@mui/material';
 import CreateIcon from '@mui/icons-material/Create';
 import Box from '@mui/material/Box';
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import {Select, MenuItem} from '@mui/material'
+import { useEffect, useState } from 'react';
 
 const WritePosting = () => {
     //ract-hook-form
     //register과 handleSubmit은 함수이다.
     //다른걸로 이름 변경이 안된다.
     const { register, handleSubmit } = useForm();
+    const [categoryList,setCategoryList]=useState([]);
     const onSubmit = (data) => {
         axios.post("http://localhost:9010/posting/write", data).then(res => {
             console.log(res);
         })
     }
+
+    const getCategory = (data) => {
+        axios.get("http://localhost:9010/posting/write", data).then(res => {
+            setCategoryList(res.data);
+        })
+    }
+
+
+    useEffect(()=>{
+        //console.log("list");
+        getCategory();
+        console.log(categoryList.length)
+      },[]);
+
     return (
         <Box component="form" sx={{ mt: 3, display: "flex", justifyContent: "center" }}
             onSubmit={handleSubmit(onSubmit)}>
@@ -28,10 +43,10 @@ const WritePosting = () => {
                     id="demo-simple-select"
                     label="카테고리"
                     {...register("category_no")}
-                    defaultValue={1}>
-                    <MenuItem value={1}>공지사항</MenuItem>
-                    <MenuItem value={2}>자유글</MenuItem>
-                    <MenuItem value={3}>소개글</MenuItem>
+                    defaultValue="">
+                        {
+                        categoryList.map((data,idx)=>(<MenuItem value={idx+1} key={data.category_name}>{data.category_name}</MenuItem>))
+                        }
                 </Select>
                 <TextField
                     id="title"
