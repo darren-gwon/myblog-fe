@@ -3,9 +3,7 @@ import React from "react";
 const Main=()=>{
     return(
         <div>
-            {
-                sessionStorage.setItem("user_id", "darren_gwon")
-            }
+            메인페이지입니다.
         </div>
     )
 }
